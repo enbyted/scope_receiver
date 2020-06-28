@@ -157,11 +157,12 @@ int main(int argc, char**argv)
     {
         spdlog::error("{}" , ex.what());
         std::cout << options.help() << std::endl;
-        return 0;
+        return 1;
     }
     catch (const std::exception& ex)
     {
         spdlog::error("Error during execution: {}", ex.what());
+        return 2;
     }
     
     return 0;
