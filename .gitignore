@@ -1,0 +1,10 @@
+# Default cmake build dir
+build/
+
+# Editor stuff
+*~
+.vscode/
+
+# Matlab files
+*.m
+*.mat
