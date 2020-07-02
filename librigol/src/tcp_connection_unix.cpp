@@ -1,3 +1,4 @@
+#ifdef __UNIX__
 #include "connection.h"
 #include "spdlog/spdlog.h"
 
@@ -36,7 +37,7 @@ namespace rigol
         {
             spdlog::info("Closing connection to scope (file descriptor: {})", m_fd);
             close(m_fd);
-            m_fd = 1;
+            m_fd = -1;
         }
     }
 
@@ -59,3 +60,4 @@ namespace rigol
     }
 
 }
+#endif

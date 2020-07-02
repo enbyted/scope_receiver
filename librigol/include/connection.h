@@ -4,6 +4,10 @@
 #include <cstddef>
 #include <string>
 
+#ifdef __WIN32__
+#include <winsock2.h>
+#endif
+
 namespace rigol
 {
     class connection
@@ -28,7 +32,11 @@ namespace rigol
 
     class tcp_connection : public connection
     {
+#ifdef __WIN32__
+        SOCKET m_fd;
+#else
         int m_fd;
+#endif
     public:
         tcp_connection(const std::string& address, std::uint16_t port);
         ~tcp_connection();
