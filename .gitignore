@@ -8,3 +8,6 @@ build/
 # Matlab files
 *.m
 *.mat
+
+# Other files
+*.wav
