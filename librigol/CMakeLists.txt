@@ -7,6 +7,7 @@ add_library(librigol
 	src/scpi_command.cpp
 )
 
+set_target_properties(librigol PROPERTIES CXX_STANDARD 17)
 target_include_directories(librigol PUBLIC include/)
 target_link_libraries(librigol spdlog)
 

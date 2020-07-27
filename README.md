@@ -25,3 +25,7 @@ Run: `./scope_receiver`
 
 TODO...
 For now please run `scope_receiver -h`
+
+# Others
+
+Mat file format documentation: https://pub.ist.ac.at/~schloegl/matlab/matfile_format.pdf
