@@ -21,8 +21,8 @@ namespace rigol
         text_query_scpi_command cmd{"TRIG", "STAT"};
         cmd.run_on(*m_connection);
 
-        if (cmd.last_response() == "TG")
-            return trigger_state::TG;
+        if (cmd.last_response() == "TD")
+            return trigger_state::TD;
 
         if (cmd.last_response() == "WAIT")
             return trigger_state::WAIT;

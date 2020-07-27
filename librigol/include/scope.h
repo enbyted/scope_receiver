@@ -9,7 +9,7 @@ namespace rigol
 {
     enum class trigger_state
     {
-        TG,
+        TD,
         WAIT,
         RUN,
         AUTO,

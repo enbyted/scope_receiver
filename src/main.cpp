@@ -57,11 +57,12 @@ void wait_for_trigger(rigol::scope &scope, trigger_mode trigger)
         scope.single();
         std::this_thread::sleep_for(std::chrono::milliseconds(400));
         spdlog::info("Waiting for trigger");
-        while (scope.get_trigger_state() != rigol::trigger_state::STOP)
-            ;
 
         break;
     }
+
+    while (scope.get_trigger_state() != rigol::trigger_state::STOP)
+        ;
 }
 
 int main(int argc, char **argv)
